@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --roboto : 'Roboto';
+    --bigShoulders : 'Big Shoulders Display';
+    --gray-1 : #E1E1E1;
+    --gray-2 : #1E1E1E;
+    --gray-3 : #4d4e4d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--roboto);
+    border: 0;
+}
+
+body,
+html {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--gray-2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--bigShoulders);
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 36px;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+h5 {
+    font-size: 28px;
+}
+
+p {
+    font-size: 18px;
+    font-family: var(--roboto);
+}
+
+.container {
+    max-width: 1040px;
+    margin: 0 auto;
+    color: var(--gray-1);
+    height: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board_task {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.taskTitle {
+    padding: 25px;
+}
+
+.taskTitle h1 {
+    text-shadow: 7px 7px 0px #000;
+}
+
+.taskInput {
+    background-color: var(--gray-1);
+    padding: 10px 30px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.taskInput input[type=text] {
+    outline: none;
+    height: 50px;
+    width: 400px;
+    margin: 0px 20px;
+    background: transparent;
+    font-size: 20px;
+}
+
+.taskInput input[type=text]::placeholder {
+    font-weight: 900;
+    font-style: italic;
+    font-variant: small-caps;
+    font-family: var(--bigShoulders);
+    letter-spacing: 2px;
+    color: var(--gray-3);
+}
+
+.taskInput input[type=text]::-webkit-input-placeholder {
+
+}
+
+.taskInput input[type=text]::-moz-placeholder {
+
+}
+
+.taskInput .fa-plus-circle {
+    width: 50px;
+    height: 50px;
+    color: var(--gray-3);
+    cursor: pointer;
+}
+
+.taskInput .fa-plus-circle:active {
+    transform: scale(.9);
+}
+
+.taskInput button {
+    background: transparent;
+    outline: 0;
+}
+
+.task_to_do {
+    align-self: flex-start;
+    padding: 25px;
+}
+
+.task_done {
+    align-self: flex-start;
+    padding: 25px;
+}
+
+.task_to_do ul li,
+.task_done ul li {
+    margin: 7px 0px;
+    font-size: 18px;
+}
+
+.task_to_do ul li {
+    cursor: pointer;
+    list-style-type: none;
+}
+
+.task_done ul li {
+    list-style: "✓  ";
+}
